@@ -9,12 +9,27 @@
 <body>
 <h1 id="cookie-counter">0</h1>
 <button id="cookie-clicker">Make cookie</button>
+<hr>
+<h2>Shop</h2>
+<hr>
+<p>Click Power</p>
+<p>Produces <span id="click-power-multiple">1</span> cookie(s) per click</p>
+<button id-"buy-click-power">Buy for <span id="click-power-price">50</span></button>
+<p>level: <span id="click-power-level">1</span></p>
 <script>
   let cookieCount = 0;
   let clickPower = 1;
+  let clickPowerPriceAmount = 50;
+  let clickPowerLevelNumber = 1;
   let cookieCounter = document.getElementById('cookie-counter');
   let cookieClicker = document.getElementById('cookie-clicker');
+  let buyClickPower = document.getElementById('buy-click-power');
+  let clickPowerPrice = document.getElementById('click-power-price');
+  let clickPowerLevel = document.getElementById('click-power-level');
+  let clickPowerMultiple = document.getElementById('click-power-multiple');
+
   cookieCounter.innerHTML = cookieCount;
+
 
   cookieClicker.addEventListener("click", function() {
   cookieCount = cookieCount + clickPower;
