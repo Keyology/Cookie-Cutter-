@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h1 id="cookie-counter">0</h1>
+<button id="cookie-clicker">Make cookie</button>
+<script>
+  let cookieCount = 0;
+  let clickPower = 1;
+  let cookieCounter = document.getElementById('cookie-counter');
+  let cookieClicker = document.getElementById('cookie-clicker');
+  cookieCounter.innerHTML = cookieCount;
+
+  cookieClicker.addEventListener("click", function() {
+  cookieCount = cookieCount + clickPower;
+   cookieCounter.innerHTML = cookieCount;
+  })
+
+</script>
+</body>
+</html>
