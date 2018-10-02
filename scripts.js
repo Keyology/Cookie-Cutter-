@@ -63,7 +63,7 @@ buyClickPower.addEventListener("click", function(){
    cookieCount -= clickPowerPriceAmount
    refreshCookieCount();
    clickPowerLevelNumber += 1;
-   clickPowerPriceAmount = Math.floor(clickPowerPriceAmount * 1.33);
+  clickPower += 1 * Math.floor(clickPowerLevelNumber * 1.05);
    clickPower += 1;
    refreshPowerClick();
  }
@@ -79,7 +79,7 @@ buyGrandma.addEventListener("click", function(){
     grandmaPriceAmount *= 1;
     refreshCookieCount()
     grandmaLevelNumber += 1;
-    grandmaPriceAmount = Math.floor(grandmaPriceAmount * 1.33);
+    grandmaPower += 10 + Math.floor(grandmaLevelNumber * 1.33);
     grandmaPower += 10;
     refreshGrandma();
 
@@ -103,8 +103,7 @@ buyFacility.addEventListener("click", function() {
     if (cookieCount >= facilityPriceAmount) {
       cookieCount -= facilityPriceAmount;
       facilityLevelNumber += 1;
-      facilityPriceAmount = Math.floor(facilityPriceAmount * 1.33);
-      facilityPower += 600;
+      facilityPower += 600 + Math.floor(facilityLevelNumber * 1.33);;
       facilityAuto = true
       autoFacilityStart();
       refreshCookieCount();
